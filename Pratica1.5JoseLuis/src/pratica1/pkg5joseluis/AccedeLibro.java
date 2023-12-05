@@ -31,6 +31,6 @@ public class AccedeLibro extends DefaultHandler{
         car=car.replaceAll("\n", "");
         System.out.print(car);
     }
-    
+    /*Con estos metodos puedes proyectarlos para poder ver esos datos que lee del archivo xml.*/
     
 }
