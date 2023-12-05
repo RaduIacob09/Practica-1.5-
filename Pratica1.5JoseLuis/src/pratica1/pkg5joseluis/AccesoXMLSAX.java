@@ -11,12 +11,14 @@ public class AccesoXMLSAX {
         try {
             SAXParserFactory factory = SAXParserFactory.newInstance();
             parser = factory.newSAXParser();
-           AccedeLibro sh = new AccedeLibro();
+            AccedeLibro sh = new AccedeLibro();
             parser.parse(f, sh);
             return 0;
         } catch (Exception e){
             e.printStackTrace();
             return -1;
+            /*Cada vez que lea una etiqueta <Libro> creara un evento de inicio. Lo tiene que hacer
+              con SAXParserFactory.*/
         }
     }
     public int parsearXMLconTitulosSAXhandler(File f){
@@ -29,6 +31,7 @@ public class AccesoXMLSAX {
         } catch (Exception e){
             e.printStackTrace();
             return -1;
+            /*Es lo mismo que la anteiror funcion pero en vez de usar la etiqueta de Libro utiliza la de Titulo.*/
         }
         
     }
